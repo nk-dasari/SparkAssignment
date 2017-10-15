@@ -48,6 +48,8 @@ public class SumAvgDF {
 		Double avg = sum/count;
 //		log.info("Sum:"+sum);
  		log.info("Average:"+avg);
+ 		DataFrame dvalDFSample = dvalDF.sample(true, 0.1).limit(2);
+ 		log.info("Sample Count:"+dvalDFSample.count());
 	}
 
 }
